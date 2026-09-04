@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
 import {
-  Menu, X, Home, Building2, KeyRound, Sparkles, AppWindow, Sofa, PartyPopper,
-  Phone, PhoneCall, Mail, MapPin, CheckCircle2, ShieldCheck, Clock, CalendarCheck,
+  Menu, X, Home, Building as Building2, Key as KeyRound, Sparkles, Monitor as AppWindow, Armchair as Sofa, Gift as PartyPopper,
+  Phone, PhoneCall, Mail, MapPin, CircleCheck as CheckCircle2, ShieldCheck, Clock, CalendarCheck,
   Users, Tag, HandHeart, ArrowRight, ChevronLeft, Send, Facebook, Instagram, Leaf,
-  MessageCircle, ClipboardCheck, SprayCan, Smile, Calculator, Lightbulb, CalendarDays,
+  MessageCircle, ClipboardCheck, Brush as SprayCan, Smile, Calculator, Lightbulb, CalendarDays,
 } from 'lucide-react';
 
 /*
