@@ -5,6 +5,7 @@ import {
   Users, Tag, Heart, ArrowRight, ChevronLeft, Send, Leaf,
   MessageCircle, Clipboard, Smile, Calculator, Lightbulb,
 } from 'lucide-react';
+import logoUrl from './logo.png';
 
 /*
   SOLUTIONWORKS (PTY) LTD — marketing website
@@ -358,20 +359,16 @@ function useCountUp(target, duration, trigger) {
 
 function LogoMark({ inverted = false }) {
   return (
-    <div className="flex items-center gap-2.5">
-      <div
-        className="flex items-center justify-center shrink-0 rounded-xl"
-        style={{ width: 44, height: 44, background: inverted ? COLORS.green : `linear-gradient(135deg, ${COLORS.navy}, ${COLORS.navyDark})` }}
-      >
-        <span style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 800, color: inverted ? COLORS.navyDark : COLORS.green, fontSize: 18 }}>SW</span>
-      </div>
-      <div className="leading-tight text-left">
-        <div style={{ fontFamily: "'Poppins', sans-serif", color: inverted ? COLORS.white : COLORS.navy }} className="font-extrabold text-base tracking-tight">
-          SOLUTIONWORKS
-        </div>
-        <div style={{ color: COLORS.green }} className="text-xs font-semibold tracking-widest uppercase">Pty Ltd</div>
-      </div>
-    </div>
+    <img 
+      src={logoUrl} 
+      alt="SolutionWorks Logo" 
+      style={{ 
+        height: 48, 
+        width: 'auto', 
+        objectFit: 'contain',
+        filter: inverted ? 'brightness(0) invert(1)' : 'none' 
+      }} 
+    />
   );
 }
 
