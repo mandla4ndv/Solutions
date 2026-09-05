@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  Menu, X, Home, Building, Key, Sparkles, AppWindow, Sofa, PartyPopper,
-  Phone, PhoneCall, Mail, MapPin, CircleCheck, ShieldCheck, Clock, CalendarCheck,
-  Users, Tag, HandHeart, ArrowRight, ChevronLeft, Send, Facebook, Instagram, Leaf,
-  MessageCircle, ClipboardCheck, SprayCan, Smile, Calculator, Lightbulb, CalendarDays,
+  Menu, X, Home, Building, Key, Sparkles, Monitor, Brush, Gift,
+  Phone, PhoneCall, Mail, MapPin, Check, Shield, Clock, Calendar,
+  Users, Tag, Heart, ArrowRight, ChevronLeft, Send, Facebook, Instagram, Leaf,
+  MessageCircle, Clipboard, Smile, Calculator, Lightbulb,
 } from 'lucide-react';
 
 /*
@@ -31,23 +31,23 @@ const SERVICES = [
   { icon: Building, title: 'Commercial & Office Cleaning', desc: 'Keep your workplace spotless with flexible schedules built around your business hours.' },
   { icon: Key, title: 'Move-In / Move-Out Cleaning', desc: 'A full deep clean before you settle in or hand over the keys, so the space is ready for its next chapter.' },
   { icon: Sparkles, title: 'Deep Cleaning', desc: 'An intensive, top-to-bottom clean that reaches everything your regular routine does not.' },
-  { icon: AppWindow, title: 'Window Cleaning', desc: 'Streak-free glass, inside and out, for homes and commercial storefronts alike.' },
-  { icon: Sofa, title: 'Carpet & Upholstery Cleaning', desc: 'Deep extraction cleaning that lifts embedded dirt and refreshes fabric, rugs, and furniture.' },
-  { icon: PartyPopper, title: 'Event Cleaning', desc: 'Pre- and post-event cleaning so your venue looks its best before guests arrive and after they leave.' },
+  { icon: Monitor, title: 'Window Cleaning', desc: 'Streak-free glass, inside and out, for homes and commercial storefronts alike.' },
+  { icon: Brush, title: 'Carpet & Upholstery Cleaning', desc: 'Deep extraction cleaning that lifts embedded dirt and refreshes fabric, rugs, and furniture.' },
+  { icon: Gift, title: 'Event Cleaning', desc: 'Pre- and post-event cleaning so your venue looks its best before guests arrive and after they leave.' },
 ];
 
 const WHY_CHOOSE_US = [
   { icon: Users, title: 'Professional & Reliable Team', desc: 'Trained, trustworthy, and committed to excellence in every job.' },
-  { icon: CalendarCheck, title: 'Flexible Schedules', desc: 'We work around your time for minimal disruption to your day.' },
-  { icon: ShieldCheck, title: 'High-Quality Standards', desc: 'Proven methods and quality products for consistently outstanding results.' },
+  { icon: Calendar, title: 'Flexible Schedules', desc: 'We work around your time for minimal disruption to your day.' },
+  { icon: Shield, title: 'High-Quality Standards', desc: 'Proven methods and quality products for consistently outstanding results.' },
   { icon: Tag, title: 'Affordable & Customized Solutions', desc: 'Tailored cleaning plans that fit your needs and your budget.' },
-  { icon: HandHeart, title: 'Commitment to Satisfaction', desc: 'Your satisfaction is our top priority, on every single visit.' },
+  { icon: Heart, title: 'Commitment to Satisfaction', desc: 'Your satisfaction is our top priority, on every single visit.' },
 ];
 
 const HOW_IT_WORKS = [
   { step: '01', icon: PhoneCall, title: 'Request a Quote', desc: "Reach out by phone, WhatsApp, or email and tell us about your space, it only takes a minute." },
-  { step: '02', icon: ClipboardCheck, title: 'We Confirm the Details', desc: "We'll ask a few quick questions and confirm your free, no-obligation quote." },
-  { step: '03', icon: SprayCan, title: 'We Clean', desc: 'Our trained team arrives on schedule and gets to work, top to bottom.' },
+  { step: '02', icon: Clipboard, title: 'We Confirm the Details', desc: "We'll ask a few quick questions and confirm your free, no-obligation quote." },
+  { step: '03', icon: Brush, title: 'We Clean', desc: 'Our trained team arrives on schedule and gets to work, top to bottom.' },
   { step: '04', icon: Smile, title: 'You Relax', desc: 'Come home or walk into the office to a space that feels brand new.' },
 ];
 
@@ -74,16 +74,16 @@ const PRICING_CATEGORIES = [
     { label: 'Medium Office', price: 'R1,500 – R3,000' },
     { label: 'Large Office', price: 'Custom Quotation' },
   ]},
-  { icon: AppWindow, title: 'Window Cleaning', rows: [
+  { icon: Monitor, title: 'Window Cleaning', rows: [
     { label: 'Residential', price: 'R250 – R800' },
     { label: 'Commercial', price: 'From R800' },
   ]},
-  { icon: Sofa, title: 'Carpet & Upholstery', rows: [
+  { icon: Brush, title: 'Carpet & Upholstery', rows: [
     { label: 'Carpet Cleaning', price: 'R300/room or R20–R35/m²' },
     { label: 'Upholstery (Single Chair)', price: 'R150 – R300' },
     { label: 'Sofa (2–3 Seater)', price: 'R500 – R900' },
   ]},
-  { icon: PartyPopper, title: 'Event Cleaning', rows: [
+  { icon: Gift, title: 'Event Cleaning', rows: [
     { label: 'Pre/Post Event', price: 'From R2,000' },
   ]},
 ];
@@ -385,7 +385,7 @@ function TrustBadge({ animate = true }) {
         flexShrink: 0,
       }}
     >
-      <ShieldCheck size={28} style={{ color: COLORS.green }} />
+      <Shield size={28} style={{ color: COLORS.green }} />
       <span style={{ fontFamily: "'Poppins', sans-serif", color: COLORS.navy, lineHeight: 1.35 }} className="font-extrabold text-xs mt-1 px-2">
         PROFESSIONAL<br />RELIABLE<br />TRUSTED
       </span>
@@ -865,7 +865,7 @@ function HomePage({ setPage }) {
         <div className="max-w-6xl mx-auto px-5 md:px-8 flex flex-wrap justify-center md:justify-between gap-x-8 gap-y-3 text-white">
           {['Free, No-Obligation Quotes', 'Residential & Commercial', 'East Rand Based', 'Fully Customized Plans'].map((t) => (
             <div key={t} className="flex items-center gap-2 text-sm font-semibold">
-              <CircleCheck size={17} style={{ color: COLORS.green }} /> {t}
+              <Check size={17} style={{ color: COLORS.green }} /> {t}
             </div>
           ))}
         </div>
@@ -1064,7 +1064,7 @@ function PricingPage({ setPage }) {
 
       <section className="py-16 md:py-24" style={{ background: COLORS.paleBlue }}>
         <div className="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-6">
-          <Reveal><SimplePriceList icon={CalendarCheck} title="Weekly & Monthly Packages" rows={PACKAGES} /></Reveal>
+          <Reveal><SimplePriceList icon={Calendar} title="Weekly & Monthly Packages" rows={PACKAGES} /></Reveal>
           <Reveal delay={0.08}><SimplePriceList icon={Sparkles} title="Optional Add-On Services" rows={ADD_ONS} /></Reveal>
           <Reveal delay={0.16}><SimplePriceList icon={MapPin} title="Call-Out Fee" rows={CALL_OUT_FEES} /></Reveal>
           <Reveal delay={0.24}><SimplePriceList icon={Tag} title="Client Discounts" rows={DISCOUNTS} accent /></Reveal>
@@ -1129,7 +1129,7 @@ function BlogPostPage({ post, setPage }) {
             <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(255,255,255,0.12)', color: COLORS.white }}>
               <CategoryIcon size={12} /> {post.category}
             </span>
-            <span className="text-xs flex items-center gap-1" style={{ color: '#B7C4DA' }}><CalendarDays size={12} /> {post.date}</span>
+            <span className="text-xs flex items-center gap-1" style={{ color: '#B7C4DA' }}><Calendar size={12} /> {post.date}</span>
             <span className="text-xs flex items-center gap-1" style={{ color: '#B7C4DA' }}><Clock size={12} /> {post.readTime}</span>
           </div>
           <h1 style={{ fontFamily: "'Poppins', sans-serif" }} className="text-2xl md:text-4xl font-extrabold text-white leading-snug">{post.title}</h1>
@@ -1154,7 +1154,7 @@ function BlogPostPage({ post, setPage }) {
                 <ul key={i} className="mb-6 space-y-2.5">
                   {block.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2.5 text-base" style={{ color: COLORS.slate }}>
-                      <CircleCheck size={18} className="mt-0.5 shrink-0" style={{ color: COLORS.green }} />
+                      <Check size={18} className="mt-0.5 shrink-0" style={{ color: COLORS.green }} />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -1215,7 +1215,7 @@ function ContactPage() {
           <Reveal delay={0.1} className="lg:col-span-3">
             {submitted ? (
               <div className="p-10 rounded-2xl text-center" style={{ background: COLORS.greenLight }}>
-                <CircleCheck size={40} style={{ color: COLORS.green }} className="mx-auto mb-4" />
+                <Check size={40} style={{ color: COLORS.green }} className="mx-auto mb-4" />
                 <h3 style={{ color: COLORS.navy }} className="font-bold text-xl mb-2">Thanks, we've got it!</h3>
                 <p style={{ color: COLORS.slate }}>We'll be in touch shortly with your free quote.</p>
               </div>
